@@ -5,51 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        screens: {
+          xs : '425px',
+          xxs: '375px',
+          mxs:'320px',
+        }
+      }
+    }
+  }
+</script>
+ <script src="https://cdn.tailwindcss.com"></script>
+
+    
 </head>
 
-<body class="bg-no-repeat bg-fixed min-h-screen bg-[url('./assets/bg.png')] w-full  ">
+<body class="bg-no-repeat bg-cover bg-fixed min-h-screen bg-[url('./assets/bg.png')] max-w-full">
 
-    <div class=" gap-[24px] flex flex-col">
+    <div class=" gap-[24px] flex flex-col ">
 
-        <div class="flex justify-center items-center pt-[46px]">
+        <!-- <div class="flex justify-center items-center pt-[46px]">
             <div
                 class=" flex justify-between py-[8px] border border-[#FFFFFF33] pl-[32px] pr-[8px]  rounded-full bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] max-w-[644px] h-[88px] w-full">
-                <div class="flex max-w-[335px] py-[21px] pl-[32px] ">
-                    <img src="./assets/Group 3.png" alt="" class="max-w-[81px] h-[35px]" />
+                <div class="flex max-w-[335px] py-[21px] md:pl-[32px] pl-6">
+                    <img src="./assets/Group 3.png" alt="" class="w-full h-full" />
                     <span class="text-[#FFFFFF] text-[17px] font-[400] leading-[100%]
                     font-extrabold max-w-[107px] w-full
                    ">Reactors.com</span>
                 </div>
 
                 <div
-                    class="flex justify-center items-center shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] max-w-[355px] rounded-full gap-[10px]   pl-[32px] pr-[26px] py-[21px]">
-                    <button type="button" class=' text-[#FFFFFF] font-[700] text-[20px] leading-[150%] '>Book a Free
-                        Discovery Call</button>
+                    class="flex justify-center items-center shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] max-w-[355px] rounded-full gap-[10px]  pl-[32px] pr-[26px] py-[21px]">
+                   
+                          <button type="button" class=' text-white  font-bold md:text-[20px] text-base leading-[150%]  '><span class="md:block hidden">Book a Free </span>Discovery Call</button>
                     <img src="./assets/Vector.svg" alt="vector " class="max-w-[32px] " />
                 </div>
             </div>
 
+        </div> -->
+          <div class="flex justify-center items-center pt-[46px]">
+            <div
+                class=" p-2 flex justify-between md:gap-20 gap-8 items-center  border border-[#FFFFFF33]  rounded-full bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)]">
+                <div class="flex ">
+                    <img src="./assets/Group 3.png" alt="" class="md:w-[81px] md:h-[35px]  w-[28px] h-[21px]pl-6" />
+                    <span class="text-white pt-[20px] pr-[40px]  md:text-[17px] text-[10px] font-[400] leading-[100%]
+                    font-extrabold
+                   ">reactors.com</span>
+                </div>
+                          <button type="button" class='flex justify-between items-center gap-[10px] md:py-5 py-3 md:pl-[32px] pl-4 md:pr-[20px] pr-3   shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] rounded-full gap-[10px]  text-white font-bold md:text-[20px] text-base leading-[150%] 
+                           '><span class="md:block hidden">Book a Free </span>Discovery Call 
+                    <img src="./assets/Vector.svg" alt="vector " class=" " />
+                        
+                        </button>
+              
+            </div>
+
         </div>
-        <div class="flex flex-col items-center pt-[112px]">
+      
+      
+        <div class="flex flex-col justify-center items-center pt-[112px]">
 
-            <p class="text-[#FFFFFF]
-             " font-[400] text-[24px] leading-[100%]>Welcome to MVP Reactors.com</p>
+            <p class="text-[#FFFFFF] font-[400] md:text-[24px] text-[16px] leading-[100%]">Welcome to MVP Reactors.com</p>
             <div class="flex flex-col justify-center items-center py-[32px]">
-                <p class="text-[#FFFFFF] font-[800] text-[64px] leading-[100%] 
-
-           ">From Idea to MVP in Just 3 Days</p>
-                <p class="text-[#FFFFFF] font-[400]
-              text-[32px] leading-[100%] pt-[8px] "> Powered by AI and build for bold Founders</p>
+                <p class="text-white font-semibold xl:text-[64px] md:text-5xl text-3xl  
+           ">From Idea to MVP in <span class=" block text-center sm:inline">Just 3 Days</span> </p>
+                <p class="sm:inline-block text-[#FFFFFF] font-[400]
+              text-[32px] leading-[100%] pt-[8px]  xs:font-[800] max-[375px]:text-[16px] xs:font-[800] xs:max-w-[1360px] xs:w-full mxs:max-w-[327px] mxs:w-full text-center "> Powered by AI and build for bold Founders</p>
             </div>
             <div
-                class="shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] flex justify-center items-center border max-w-[404px] rounded-full gap-[10px] py-[20px]  pl-[32px] pr-[22px]">
-                <button type="button" class=' text-[#FFFFFF]  '>Book a Free Discovery Call</button>
+                class="shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] flex justify-center items-center border max-w-[404px] rounded-full gap-[10px] py-[20px]  pl-[32px] pr-[22px]" sddsbd>
+                <button type="button" class=' text-[#FFFFFF]  '><span class="md:block hidden">Book a Free </span>Discovery Call</button>
                 <img src="./assets/Vector.svg" alt="vector " />
             </div>
-
             <p
-                class=" pt-[24px] bg-gradient-to-r from-white/0 via-white/40 to-white/-0 bg-clip-text text-transparent font-[400] text-[29px] leading-[150%] px-[30px] tracking-[0%] max-w-[1360px] ">
+                class="  pt-[24px] bg-gradient-to-r from-white/0 via-white/40 to-white/-0 bg-clip-text text-transparent font-[400] text-[29px] leading-[150%] px-[30px] tracking-[0%] max-w-[1299px] ">
                 import
                 React, {
                 useState,
@@ -71,7 +104,7 @@
 
 
         </div>
-        <div class="flex gap-[52px] justify-center items-centers    ">
+         <div class="grid flex lg:gap-[52px] grid-cols-3 max-[425px]:grid-cols-1  max-[768px]:gap-[10px]  max-[2560px]:gap-[32px]  ">
 
             <div class=" max-w-[418px] text-center  
                 bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33]
@@ -112,7 +145,7 @@
     </div>
 
 
-    <div class="pt-[180px] max-w-[1360px]  w-full mx-auto">
+       <!-- <div class="pt-[180px] max-w-[1360px]  w-full mx-auto">
         <p class="text-[#FFFFFF] font-[800] text-[48px] leading-[100%] text-center  pb-[48px]">What we Offers
         </p>
         <div class="grid grid-cols-3 gap-[80px] ">
@@ -188,9 +221,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class=" mx-[280px]  max-w-[1360px] w-full">
+    </div>    -->
+ 
+     <!-- <div class=" mx-[280px]  max-w-[1360px] w-full">
 
         <p class="text-[#FFFFFF] font-[800] text-[48px] leading-[100%] tracking--[0%] pb-[80px] pt-[180px] text-center">
             Real
@@ -310,10 +343,10 @@
                     loved the speed.”</p>
             </div>
         </div>
-    </div>
-    </div>
+    </div>  -->
 
-    <div class="pt-[180px]  ">
+ 
+      <!-- <div class="pt-[180px]  ">
         <p class=" text-center pb-[80px] font-[800] text-[48px] leading-[100%] text-[#FFFFFF]">Frequently Asked
             Questions</p>
         <div class="flex flex-col  max-w-[1360px]">
@@ -411,10 +444,14 @@
                 <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent mt-4"></div>
             </div>
         </div>
-    </div>
+    </div>  -->
 
-    
-    <!-- <div class="max-w-[1360px] mx-[280px] text-center">
+     <!-- <div class="max-w-[1360px] mx-[280px] font-[400] text-[24px] leading-[150%] tracking-[1%]">
+        <div class="flex flex-col justify-center items-center gap-[32px] pt-[180px] ">
+        <p class="font-[400px] text-[24px] leading-[100%] tracking-[0%] text-[#FFFFFF]">Our Pricing</p>
+            <img src="./assets/emoji1.png" alt="emoji" class="max-w-[64px] h-[64px]" />
+
+      <div class="max-w-[1360px] mx-[280px] text-center">
         <p class=" text-[#FFFFFF] text-[24px] font-[400] leading-[100%] text-center">Our Pricing </p>
 
         <p class=" text-[#FFFFFF] font-[800] text-[64px] leading-[100%]">Love at first click? Great. Until
@@ -433,26 +470,11 @@
         <p class="font-[800px] text-[24px] leading-[150%] tracking-[1%]">Simple. Easy. Understood!</p>
         <p class="font-[800px] text-[24px] leading-[150%] tracking-[1%]">Now go on—book a discovery call. We’re not just
             ready... we’re desperately waiting for you.</p>
+    </div> 
+    </div>
+        </div>  -->
 
 
-
-
-    </div> -->
-
-
-    <div class="">
-        <pre>
-            We charge 4500 USD per project—but only if you’re smiling at the end. Don’t like what we built? Full refund. No drama, no awkward silence, just good vibes.
-
-Our secret sauce? A mix of AI magic (yes, we let it do the vibe coding) and our in-house design + dev team who make sure everything not only looks great but actually works. We don’t just hand over code—we shape it, polish it, and make it dance.
-
-You only pay when it does exactly what you imagined.
-Simple. Easy. Understood!  
-
-Now go on—book a discovery call. We’re not just ready... we’re desperately waiting for you.
-        </pre> 
-          </div>
-    
 
 
     <script>
@@ -472,7 +494,7 @@ Now go on—book a discovery call. We’re not just ready... we’re desperately
                 }
             });
         }
-    </script>
+    </script> 
 
 </body>
 
