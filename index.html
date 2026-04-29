@@ -4,6 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketing Page</title>
+    <style>
+   @keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider-left {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider-right {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollRight 25s linear infinite;
+}
+</style>
+    </style>
 
     <!-- <script>
   tailwind.config = {
@@ -323,88 +357,188 @@
         Real Results from Real Founders
       </p>
 
-      <div class="grid grid-cols-3 place-items-center gap-x-[16px] mx-auto">
-        <div
-          class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
-        >
-          <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
-            Sarah B., Healthtech Founder
-          </p>
-          <div class="flex gap-[8px]">
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-          </div>
+      <div class="overflow-hidden w-full">
+        <div class="slider-left flex gap-[16px]">
+          <div class="grid grid-cols-3 place-items-center gap-x-[16px] mx-auto shrink-0">
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
 
-          <p
-            class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
-          >
-            Raised $50K angel investment within 10 days.
-          </p>
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
 
-          <p
-            class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
-          >
-            “I pitched my MVP the same week I hired them. It worked flawlessly,
-            and investors loved the speed.”
-          </p>
-        </div>
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
 
-        <div
-          class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
-        >
-          <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
-            Sarah B., Healthtech Founder
-          </p>
-          <div class="flex gap-[8px]">
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+              <p
+                class="max-w-[544px] font-telegraf text-[#CBD5E1] font-[400] leading-[150%] tracking-[0%] 2xl:text-[14px] text-[12px]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%] text-[]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
           </div>
-          <p
-            class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
-          >
-            Raised $50K angel investment within 10 days.
-          </p>
-          <p
-            class="max-w-[544px] font-telegraf text-[#CBD5E1] font-[400] leading-[150%] tracking-[0%] 2xl:text-[14px] text-[12px]"
-          >
-            “I pitched my MVP the same week I hired them. It worked flawlessly,
-            and investors loved the speed.”
-          </p>
-        </div>
-        <div
-          class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
-        >
-          <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
-            Sarah B., Healthtech Founder
-          </p>
-          <div class="flex gap-[8px]">
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-            <img src="./assets/star.svg" alt="" />
-          </div>
-          <p
-            class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
-          >
-            Raised $50K angel investment within 10 days.
-          </p>
-          <p
-            class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%] text-[]"
-          >
-            “I pitched my MVP the same week I hired them. It worked flawlessly,
-            and investors loved the speed.”
-          </p>
         </div>
       </div>
 
-      <div
+
+
+
+
+
+<div class="overflow-hidden w-full mt-[32px]">
+        <div class="slider-right flex gap-[16px]">
+          <div class="grid grid-cols-3 place-items-center gap-x-[16px] mx-auto shrink-0">
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+              <p
+                class="max-w-[544px] font-telegraf text-[#CBD5E1] font-[400] leading-[150%] tracking-[0%] 2xl:text-[14px] text-[12px]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%] text-[]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- <div
         class="grid grid-cols-3 pt-[32px] place-items-center mx-auto gap-x-[16px]"
       >
         <div
@@ -485,7 +619,7 @@
             and investors loved the speed.”
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="pt-[180px] mx-auto w-full max-w-[1360px]">
