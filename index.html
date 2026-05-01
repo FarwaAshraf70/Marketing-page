@@ -5,41 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketing Page</title>
     <style>
-   @keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.slider-left {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  animation: scrollLeft 15s linear infinite;
-}
-
-@keyframes scrollRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.slider-right {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  animation: scrollRight 25s linear infinite;
-}
-</style>
+      .slider-track {
+        display: flex;
+        gap: 1rem;
+        width: max-content;
+      }
+      .slider-row {
+        overflow: hidden;
+      }
+      .slider-track.rtl {
+        animation: scroll-left 22s linear infinite;
+      }
+      .slider-track.ltr {
+        animation: scroll-right 22s linear infinite;
+      }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
     </style>
 
-    
     <script src="index.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,9 +44,9 @@
   </head>
 
   <body
-    class="bg-no-repeat bg-cover bg-fixed min-h-screen bg-[url('./assets/bg.png')] max-w-full"
+    class="bg-no-repeat bg-cover bg-fixed min-h-screen bg-[url('./assets/bg.png')] max-w-full mx-auto"
   >
-    <div class="gap-[24px] flex flex-col mx-auto ">
+    <div class="gap-[24px] flex flex-col mx-auto">
       <div class="flex justify-center items-center pt-[46px]">
         <div
           class="max-w-[644px] w-full flex justify-between md:gap-20 gap-[80px] items-center border border-[#FFFFFF33] rounded-full bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)]"
@@ -73,52 +70,53 @@
           </div>
         </div>
       </div>
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col justify-center items-center pt-[113px] mx-auto max-w-[1360px]"
+    <div
+      class="flex flex-col justify-center items-center pt-[113px] mx-auto max-w-[1360px]"
+    >
+      <p
+        class="text-[#FFFFFF] font-[400] md:text-[24px] text-[16px] leading-[100%] font-telegraf"
       >
-        <p
-          class="text-[#FFFFFF] font-[400] md:text-[24px] text-[16px] leading-[100%] font-telegraf"
-        >
-          Welcome to MVP Reactors.com
-        </p>
-        <div class="flex flex-col justify-center items-center py-[32px]">
-          <div class="flex">
-            <p
-              class="text-[#FFFFFF] font-telegraf font-semibold xl:text-[64px] md:text-5xl text-3xl"
-            >
-              From Idea to MVP in
-              <span class="block text-center sm:inline">Just 3 Days</span>
-            </p>
-            <img
-              src="./assets/emoji2.png"
-              alt=""
-              class="pt-[2px] w-[64px] h-[64px]"
-            />
-          </div>
+        Welcome to MVP Reactors.com
+      </p>
+      <div class="flex flex-col justify-center items-center py-[32px]">
+        <div class="flex">
           <p
-            class="sm:inline-block text-[#FFFFFF] font-[400] text-[32px] leading-[100%] pt-[8px] max-[375px]:text-[16px] text-center"
+            class="text-[#FFFFFF] font-telegraf font-semibold xl:text-[64px] md:text-5xl text-3xl"
           >
-            Powered by AI and build for bold Founders
+            From Idea to MVP in
+            <span class="block text-center sm:inline">Just 3 Days</span>
           </p>
+          <img
+            src="./assets/emoji2.png"
+            alt=""
+            class="pt-[2px] w-[64px] h-[64px]"
+          />
         </div>
-        <div class="pr-[8px]">
-          <button
-            type="button"
-            class="flex justify-between items-center gap-[10px] md:py-5 py-[21px] md:pl-[32px] pl-4 md:pr-[20px] shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] rounded-full gap-[10px] text-[#FFFFFF] font-[700] md:text-[20px] leading-[150%]"
-          >
-            <span class="md:block hidden font-satoshi">Book a Free </span
-            >Discovery Call
-            <img src="./assets/Vector.svg" alt="vector " class=" " />
-          </button>
-        </div>
+        <p
+          class="sm:inline-block text-[#FFFFFF] font-[400] text-[32px] leading-[100%] pt-[8px] max-[375px]:text-[16px] text-center"
+        >
+          Powered by AI and build for bold Founders
+        </p>
       </div>
-   
+      <div class="pr-[8px]">
+        <button
+          type="button"
+          class="flex justify-between items-center gap-[10px] md:py-5 py-[21px] md:pl-[32px] pl-4 md:pr-[20px] shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] rounded-full gap-[10px] text-[#FFFFFF] font-[700] md:text-[20px] leading-[150%]"
+        >
+          <span class="md:block hidden font-satoshi">Book a Free </span
+          >Discovery Call
+          <img src="./assets/Vector.svg" alt="vector " class=" " />
+        </button>
+      </div>
+    </div>
 
-      <div class="mx-auto max-w-[1360px] ">
-        <img src="./assets/text-CLkxjevk.png" alt="" class="" />
-        <!-- <p
+    <div
+      class="mx-auto max-w-[1360px] flex flex-col justify-between items-center"
+    >
+      <img src="./assets/text-CLkxjevk.png" alt="" class="" />
+      <!-- <p
           class="pt-[24px] bg-gradient-to-r from-white/0 via-white/40 to-white/-0 bg-clip-text text-transparent font-[400] text-[29px] leading-[150%] px-[30px] tracking-[0%] max-w-[1299px] mx-auto"
         >
           import React, { useState, useEffect } from 'react';bg-gradient-to-r
@@ -135,87 +133,89 @@
           }, { id: 3, name: 'Sofia Weber', role: 'Datenanalystin', avatar:
           'https://via.placeholder.com/100' }
         </p> -->
-      </div>
+    </div>
 
-
-
+    <div
+      class="w-full mx-auto flex max-[1340px]:flex-wrap items-center justify-center gap-[24px] pt-[24px]"
+    >
       <div
-        class=" w-full mx-auto flex flex-wrap items-center justify-center gap-[24px] pt-[24px]"
+        class="max-w-[418px] w-full h-[267px] flex flex-col gap-[16px] text-center bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px] border border-1 p-[32px] max-w-[1400px]:text-center"
       >
-        <div
-          class="max-w-[418px] w-full h-[267px] flex flex-col gap-[16px]  text-center bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px] border border-1 p-[32px] max-w-[1400px]:text-center"
+        <p
+          class="text-[#FFFFFF] font-telegraf font-[400] text-[24px] leading-[100%] tracking-[0%]"
         >
-          <p
-            class="text-[#FFFFFF] font-telegraf font-[400] text-[24px] leading-[100%] tracking-[0%]"
-          >
-            Day- 0
-          </p>
-          <p
-            class="font-[800] font-telegraf text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
-          >
-            Book & Scope
-          </p>
-          <p
-            class="max-w-[400px] w-full font-[400] font-telegraf text-[#CBD5E1] text-[24px] leading-[150%] max-[1400px]:text-center "
-          >
-            We define your MVP’s must-haves on a quick call.
-          </p>
-        </div>
-        <div
-          class="max-w-[418px] w-full   flex flex-col gap-[16px]  text-center bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px]   border border-1 p-[32px] "
+          Day- 0
+        </p>
+        <p
+          class="font-[800] font-telegraf text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
         >
-          <p
-            class="font-telegraf text-[#FFFFFF] font-[400] text-[24px] leading-[100%] tracking-[0%]"
-          >
-            Day 1-2
-          </p>
-          <p
-            class="font-telegraf font-[800] text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
-          >
-            Build & Review
-          </p>
-          <p
-            class="font-telegraf font-[400] text-[#CBD5E1]  text-[24px] leading-[150%] "
-          >
-            Our team builds while you relax. On Day 2, we show you a live demo.
-          </p>
-        </div>
-        <div
-          class="max-w-[418px] w-full h-[267px]  text-center  flex flex-col gap-[16px]  bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px]  border border-1 p-[32px] "
+          Book & Scope
+        </p>
+        <p
+          class="max-w-[400px] w-full font-[400] font-telegraf text-[#CBD5E1] text-[24px] leading-[150%] max-[1400px]:text-center"
         >
-          <p
-            class="font-telegraf text-[#FFFFFF] font-[400] text-[24px] leading-[100%] tracking-[0%]"
-          >
-            Day-3
-          </p>
-          <p
-            class="font-telegraf font-[800] text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
-          >
-            Launch & Handof
-          </p>
-          <p
-            class="font-telegraf font-[400] text-[#CBD5E1]  text-[24px] leading-[150%]"
-          >
-            our MVP goes live. You get everything — code & clarity.
-          </p>
-        </div>
+          We define your MVP’s must-haves on a quick call.
+        </p>
       </div>
-   
+      <div
+        class="max-w-[418px] w-full flex flex-col gap-[16px] text-center bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px] border border-1 p-[32px]"
+      >
+        <p
+          class="font-telegraf text-[#FFFFFF] font-[400] text-[24px] leading-[100%] tracking-[0%]"
+        >
+          Day 1-2
+        </p>
+        <p
+          class="font-telegraf font-[800] text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
+        >
+          Build & Review
+        </p>
+        <p
+          class="font-telegraf font-[400] text-[#CBD5E1] text-[24px] leading-[150%]"
+        >
+          Our team builds while you relax. On Day 2, we show you a live demo.
+        </p>
+      </div>
+      <div
+        class="max-w-[418px] w-full h-[267px] text-center flex flex-col gap-[16px] bg-[linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.01)),linear-gradient(180deg,rgba(133,124,255,0.3)_0%,rgba(80,74,153,0)_32.45%),linear-gradient(114.89deg,rgba(133,124,255,0.3)_3.24%,rgba(80,74,153,0)_27.34%),linear-gradient(286.96deg,rgba(133,124,255,0.3)_1.21%,rgba(80,74,153,0)_20.66%)] border border-[#FFFFFF33] rounded-[32px] border border-1 p-[32px]"
+      >
+        <p
+          class="font-telegraf text-[#FFFFFF] font-[400] text-[24px] leading-[100%] tracking-[0%]"
+        >
+          Day-3
+        </p>
+        <p
+          class="font-telegraf font-[800] text-[#FFFFFF] text-[32px] leading-[120%] tracking-[0%]"
+        >
+          Launch & Handof
+        </p>
+        <p
+          class="font-telegraf font-[400] text-[#CBD5E1] text-[24px] leading-[150%]"
+        >
+          our MVP goes live. You get everything — code & clarity.
+        </p>
+      </div>
+    </div>
 
-
-    <div class="pt-[180px] max-w-[1360px] max-[1350px]:max-w-[1100px]  w-full mx-auto">
+    <div
+      class="pt-[180px] max-w-[1360px] max-[1350px]:max-w-[1100px] w-full mx-auto flex justify-center items-center flex-col"
+    >
       <p
         class="text-[#FFFFFF] font-[800] text-[48px] leading-[100%] text-center pb-[48px]"
       >
         What we Offers
       </p>
       <div
-        class="grid grid-cols-3 max-[1407px]:grid-cols-2 gap-y-[60px] max-[1407px]:gap-x-[20px] max-[1407px]:gap-y-[40px]  max-w-[1360px] w-full  mx-auto place-items-center "
+        class="grid grid-cols-3 max-[1407px]:grid-cols-2 max-[800px]:grid-cols-1 gap-y-[60px] max-[1407px]:gap-x-[20px] max-[1407px]:gap-y-[40px] max-w-[1360px] w-full mx-auto place-items-center"
       >
         <div
           class="max-w-[400px] h-[232px] font-telegraf flex flex-col gap-[24px] max-[1430px]:text-center"
         >
-          <img src="./assets/Helix.svg" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto" />
+          <img
+            src="./assets/Helix.svg"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-[800] text-[28px] leading-[120%] tracking-[0%]"
           >
@@ -227,10 +227,13 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-         
         </div>
         <div class="max-w-[400px] font-telegraf max-[1430px]:text-center">
-          <img src="./assets/Mask Group.svg" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto" />
+          <img
+            src="./assets/Mask Group.svg"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-[800] font-telegraf text-[28px] leading-[120%] pb-[24px] pt-[24px]"
           >
@@ -243,11 +246,14 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-          
         </div>
 
         <div class="max-w-[400px] font-telegraf max-[1430px]:text-center">
-          <img src="./assets/Cylinder 4.png" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto" />
+          <img
+            src="./assets/Cylinder 4.png"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-telegraf font-[800] text-[28px] leading-[120%] pb-[24px] pt-[24px]"
           >
@@ -259,10 +265,13 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-         
         </div>
         <div class="max-w-[400px] font-telegraf max-[1430px]:text-center">
-          <img src="./assets/Thorus Knot.svg" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto" />
+          <img
+            src="./assets/Thorus Knot.svg"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-telegraf font-[800] text-[28px] leading-[120%] pb-[24px] pt-[24px]"
           >
@@ -274,10 +283,13 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-         
         </div>
         <div class="max-w-[400px] font-telegraf max-[1430px]:text-center">
-          <img src="./assets/pinkmask.svg" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto" />
+          <img
+            src="./assets/pinkmask.svg"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-[800] font-telegraf text-[28px] leading-[120%] pb-[24px] pt-[24px]"
           >
@@ -289,10 +301,13 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-         
         </div>
         <div class="max-w-[400px] font-telegraf max-[1430px]:text-center">
-          <img src="./assets/circleblue.svg" alt="" class="max-w-[56px] w-full  max-[1430px]:mx-auto"  />
+          <img
+            src="./assets/circleblue.svg"
+            alt=""
+            class="max-w-[56px] w-full max-[1430px]:mx-auto"
+          />
           <p
             class="text-[#FFFFFF] font-[800] font-telegraf text-[28px] leading-[120%] pb-[24px] pt-[24px]"
           >
@@ -304,11 +319,9 @@
             We define your MVP’s must-haves on a
             <span class="block max-[1430px]:text-center"> quick call. </span>
           </p>
-          
         </div>
       </div>
-   
-   
+
       <div class="flex justify-center items-center pt-[80px]">
         <button
           type="button"
@@ -321,19 +334,50 @@
       </div>
     </div>
 
-    <div class="max-w-[1920px] gap-x-[16px] w-full mx-auto">
+    <div
+      class="gap-x-[16px] w-full mx-auto flex justify-center items-center overflow-hidden flex-col"
+    >
       <p
         class="text-[#FFFFFF] font-[800] text-[48px] leading-[100%] tracking--[0%] pb-[80px] text-center pt-[180px] pb-[80px]"
       >
         Real Results from Real Founders
       </p>
 
-      <div class="overflow-hidden w-full">
-        <div class="slider-left flex gap-[16px]">
-          <div class="flex justify-center place-items-center gap-x-[16px] mx-auto shrink-0">
-            
+      <div
+        class="mx-auto space-y-8 flex flex-col gap-[6px] justify-center items-center"
+      >
+        <div
+          class="slider-row overflow-hidden w-full flex justify-center items-center"
+        >
+          <div class="slider-track rtl flex justify-center items-center">
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
 
-             <div
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+            <div
               class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
             >
               <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
@@ -373,50 +417,20 @@
                 <img src="./assets/star.svg" alt="" />
                 <img src="./assets/star.svg" alt="" />
               </div>
-              <p
-                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
-              >
-                Raised $50K angel investment within 10 days.
-              </p>
-              <p
-                class="max-w-[544px] font-telegraf text-[#CBD5E1] font-[400] leading-[150%] tracking-[0%] 2xl:text-[14px] text-[12px]"
-              >
-                “I pitched my MVP the same week I hired them. It worked
-                flawlessly, and investors loved the speed.”
-              </p>
-            </div>
-            <div
-              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
-            >
-              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
-                Sarah B., Healthtech Founder
-              </p>
-              <div class="flex gap-[8px]">
-                <img src="./assets/star.svg" alt="" />
-                <img src="./assets/star.svg" alt="" />
-                <img src="./assets/star.svg" alt="" />
-                <img src="./assets/star.svg" alt="" />
-                <img src="./assets/star.svg" alt="" />
-              </div>
-              <p
-                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
-              >
-                Raised $50K angel investment within 10 days.
-              </p>
-              <p
-                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%] text-[]"
-              >
-                “I pitched my MVP the same week I hired them. It worked
-                flawlessly, and investors loved the speed.”
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-<div class="overflow-hidden w-full mt-[32px] mx-auto max-w-[1920px]">
-        <div class="slider-right flex gap-[16px]">
-          <div class="flex justify-center place-items-center gap-x-[16px] mx-auto shrink-0">
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
             <div
               class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
             >
@@ -444,7 +458,13 @@
                 flawlessly, and investors loved the speed.”
               </p>
             </div>
+          </div>
+        </div>
 
+        <div
+          class="slider-row overflow-hidden w-full flex justify-center items-center"
+        >
+          <div class="slider-track ltr flex justify-center items-center">
             <div
               class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
             >
@@ -458,13 +478,15 @@
                 <img src="./assets/star.svg" alt="" />
                 <img src="./assets/star.svg" alt="" />
               </div>
+
               <p
                 class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
               >
                 Raised $50K angel investment within 10 days.
               </p>
+
               <p
-                class="max-w-[544px] font-telegraf text-[#CBD5E1] font-[400] leading-[150%] tracking-[0%] 2xl:text-[14px] text-[12px]"
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
               >
                 “I pitched my MVP the same week I hired them. It worked
                 flawlessly, and investors loved the speed.”
@@ -483,13 +505,69 @@
                 <img src="./assets/star.svg" alt="" />
                 <img src="./assets/star.svg" alt="" />
               </div>
+
               <p
                 class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
               >
                 Raised $50K angel investment within 10 days.
               </p>
+
               <p
-                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%] text-[]"
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
+              >
+                “I pitched my MVP the same week I hired them. It worked
+                flawlessly, and investors loved the speed.”
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-[16px] sm:max-w-[608px] h-[220px] w-full bg-[linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(0deg,_rgba(255,255,255,0.01),_rgba(255,255,255,0.01)),_linear-gradient(180deg,_rgba(133,124,255,0.3)_0%,_rgba(80,74,153,0)_32.45%),_linear-gradient(114.89deg,_rgba(133,124,255,0.3)_3.24%,_rgba(80,74,153,0)_27.34%),_linear-gradient(286.96deg,_rgba(133,124,255,0.3)_1.21%,_rgba(80,74,153,0)_20.66%)] px-[32px] py-[32px] border border-[#FFFFFF33] rounded-[32px]"
+            >
+              <p class="text-[#FFFFFF] font-[400] text-[12px] leading-[150%]">
+                Sarah B., Healthtech Founder
+              </p>
+              <div class="flex gap-[8px]">
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+                <img src="./assets/star.svg" alt="" />
+              </div>
+
+              <p
+                class="font-[800] max-w-[544px] w-full text-[18px] 2xl:text-[20px] whitespace-nowrap leading-[120%] tracking-[0%] text-[#FFFFFF]"
+              >
+                Raised $50K angel investment within 10 days.
+              </p>
+
+              <p
+                class="text-[#CBD5E1] 2xl:text-[14px] text-[12px] font-[400] leading-[150%] tracking-[0%]"
               >
                 “I pitched my MVP the same week I hired them. It worked
                 flawlessly, and investors loved the speed.”
@@ -498,11 +576,9 @@
           </div>
         </div>
       </div>
-       
-        
     </div>
 
-    <div class="pt-[180px] mx-auto w-full max-w-[1360px] max-[1426px]:w-[1200px]  max-[1200px]:w-[1000px]">
+    <div class="pt-[180px] px-12 mx-auto w-full max-w-[1360px]">
       <p
         class="text-center pb-[80px] font-[800] text-[48px] leading-[100%] text-[#FFFFFF]"
       >
@@ -643,77 +719,76 @@
     </div>
 
     <div
-      class="max-w-[1360px] max-[1426px]:w-[1250px] w-full mx-auto text-center text-white flex flex-col gap-[32px]"
+      class="max-w-[1360px] w-full flex justify-center items-center mx-auto text-center text-white flex flex-col gap-[32px]"
     >
       <p
-        class="text-[#FFFFFF] font-[800] text-[64px] max-w-[1360px] leading-[100%] max-[1285px]:text-[54px] max-[1180px]:text-[45px] "
+        class="text-[#FFFFFF] font-[800] text-[28px] sm:text-[34px] md:text-[38px] lg:text-[42px] max-w-[1360px] mx-auto px-[16px] text-center leading-[130%] sm:leading-[120%] lg:leading-[100%]"
       >
         Love at first click? Great. Until then, it’s on us.
       </p>
-      <div class="max-[1180px]:text-[18px] max-[1180px]:w-[900px] text-center  ">
-      <p
-        class="max-w-[1360px]  break-normal mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
+      <div
+        class="text-center max-w-[1360px] w-full px-[16px] mx-auto max-[800px]:text-[18px] max-[800px]:py-[30px]"
       >
-        We charge
-        <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
-          >4500 USD</span
+        <p
+          class="break-normal mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
         >
-        per project—but only if you’re<span
-          class="font-[800] text-[24px] leading-[150%] tracking-[1]"
+          We charge
+          <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
+            >4500 USD</span
+          >
+          per project—but only if you’re<span
+            class="font-[800] text-[24px] leading-[150%] tracking-[1]"
+          >
+            smiling</span
+          >
+          at the end. Don’t like what we built?
+          <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
+            >Full refund. No drama, no awkward silence,</span
+          >
+          just good vibes.
+        </p>
+        <p
+          class="mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
         >
-          smiling</span
-        >
-        at the end. Don’t like what we built?
-        <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
-          >Full refund. No drama, no awkward silence,</span
-        >
-        just good vibes.
-      </p>
-      <p
-        class=" mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
-      >
-        <span class="font-[800] text-[24px] leading-[150%] tracking-[1]">
-          Our secret sauce?
-        </span>
-        A mix of AI magic (yes, we let it do the vibe coding) and our in-house
-        design + dev team who make sure everything not only looks great but
-        actually works. We don’t just hand over code—we shape it, polish it, and
-        make it
-        <span class="block font-[400] text-[24px] leading-[150%] tracking-[1]">
-          dance.
-        </span>
-      </p>
+          <span class="font-[800] text-[24px] leading-[150%] tracking-[1]">
+            Our secret sauce?
+          </span>
+          A mix of AI magic (yes, we let it do the vibe coding) and our in-house
+          design + dev team who make sure everything not only looks great but
+          actually works. We don’t just hand over code—we shape it, polish it,
+          and make it dance.
+        </p>
 
-     
-      <p
-        class=" mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
-      >
-        <span class="font-[800] text-[24px] leading-[150%] tracking-[1]">
-          You only pay when it does exactly what you imagined.
-        </span>
-
-        <span class="block font-[400] text-[24px] leading-[150%] tracking-[1]">
-          simple. Easy. Understood!
-        </span>
-      </p>
-
-      <p
-        class=" mt-[10px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
-      >
-        Now go on—
-        <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
-          >book a discovery call</span
+        <p
+          class="mt-[32px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
         >
-        . We’re not just ready... we’re desperately waiting for you.
-      </p>
+          <span class="font-[800] text-[24px] leading-[150%] tracking-[1]">
+            You only pay when it does exactly what you imagined.
+          </span>
+
+          <span
+            class="block font-[400] text-[24px] leading-[150%] tracking-[1]"
+          >
+            simple. Easy. Understood!
+          </span>
+        </p>
+
+        <p
+          class="mt-[10px] font-[800px] text-[24px] leading-[150%] tracking-[1%]"
+        >
+          Now go on—
+          <span class="font-[800] text-[24px] leading-[150%] tracking-[1]"
+            >book a discovery call</span
+          >
+          . We’re not just ready... we’re desperately waiting for you.
+        </p>
+      </div>
     </div>
 
-</div>
-
     <div
-      class="relative border-[1px] border-[#FFFFFF33] mx-auto px-[32px] 2xl:py-[32px] xl:py-[16px] mt-[32px] 2xl:max-w-[854px] xl:max-w-[700px]   rounded-[32px]   md:max-w-[600px] "
+      class="relative border-[1px] border-[#FFFFFF33] mx-auto px-[32px] 2xl:py-[32px] xl:py-[16px] mt-[32px] 2xl:max-w-[854px] xl:max-w-[700px] max-[800px]:py-[25px] rounded-[32px] md:max-w-[600px]"
     >
-      <div class="xl:px-[32px] xl:py-[32px] lg:py-[28px]  flex flex-col">
+      <div class="xl:px-[32px] xl:py-[32px] lg:py-[28px] flex flex-col">
         <p
           class="font-telegraf font-[800] text-[#FFFFFF] text-[32px] tracking-[1%] leading-[150%]"
         >
@@ -725,12 +800,12 @@
           howdy@mvpreactors.com <span>OR drop a message.</span>
         </p>
       </div>
-      <div class="flex flex-col max-w-[790px]">
+      <div class="flex flex-col max-w-[790px] pb-[10px] pt-[20px]">
         <div class="max-w-[790px] flex flex-col gap-[16px]">
           <input
             type="email"
             placeholder="Email"
-            class="max-w-[790px] border-[1px] border-[#FFFFFF33] outline-none text-white text-[24px] font-[400] xl:py-[20px] lg:py-[18px] rounded-[16px] bg-[#FFFFFF03] backdrop-blur-[17px] leading-[150%] pl-[32px] backdrop-blur-[34px]"
+            class="max-w-[790px] border-[1px] border-[#FFFFFF33] outline-none text-white text-[24px] font-[400] max-[1024px]:py-[18px] xl:py-[20px] lg:py-[18px] rounded-[16px] bg-[#FFFFFF03] backdrop-blur-[17px] leading-[150%] pl-[32px] backdrop-blur-[34px]"
           />
           <textarea
             type="Message"
@@ -741,10 +816,12 @@
           ></textarea>
         </div>
       </div>
-      <div class="flex justify-end 2xl:pt-[86px] xl:pt-[66px] lg:pt-[20px] lg:pb-[20px]">
+      <div
+        class="flex justify-end 2xl:pt-[86px] xl:pt-[66px] lg:pt-[20px] lg:pb-[20px] max-[1023px]:py-[1px] pb-[40px]"
+      >
         <button
           type="button"
-          class="flex justify-end gap-[10px]  py-[21px] md:pl-[32px] pl-4 md:pr-[20px] shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] rounded-full gap-[6px] text-[#FFFFFF] font-[700] md:text-[18px] leading-[150%] font-satoshi   md:py-[10px] "
+          class="flex justify-end gap-[10px] py-[21px] md:pl-[32px] pl-4 md:pr-[20px] shadow-[0px_3px_4px_0px_#A8A2FF40_inset,0px_3px_4px_0px_#A8A2FF66_inset,0px_-3px_4px_0px_#A8A2FF40_inset,0px_-3px_4px_0px_#857CFF66_inset] backdrop-blur-[34px] rounded-full gap-[6px] text-[#FFFFFF] font-[700] md:text-[18px] leading-[150%] font-satoshi md:py-[10px] max-[1023px]:py-[1px]"
         >
           Submit
           <img src="./assets/Vector.svg" alt="vector " class="max-w-[18px]" />
@@ -756,25 +833,20 @@
     </div>
 
     <div class="w-full relative mt-[180px] border-t border-[#FFFFFF1A]">
-    
       <div class="absolute inset-0 bg-[#857cff] blur-[82px] z-[-1]"></div>
 
-    
       <div
         class="max-w-[1200px] mx-auto flex justify-between items-center py-[32px] px-[24px] text-white"
       >
-   
-        <div>
+        <div class="max-[800px]:text-[14px]">
           <p
-            class="font-telegraf font-[400] text-[18px] leading-[18px] tracking-[0.24px]"
+            class="font-telegraf font-[400] text-[18px] leading-[18px] tracking-[0.24px] max-[800px]:text-[14px]"
           >
             2020 The Good Company. All Rights Reserved
           </p>
         </div>
 
-     
         <div class="flex items-center">
-         
           <div class="pr-[16px] flex items-center gap-[8px]">
             <img
               src="./assets/Instagram.svg"
@@ -788,10 +860,9 @@
             />
           </div>
 
-        
           <div class="border-l border-[#FFFFFF66]">
             <ul
-              class="flex xl:gap-[32px]  space-x-[24px] pl-[16px] [&_a]:no-underline [&_a:hover]:underline [&_a:focus]:underline"
+              class="flex xl:gap-[32px] space-x-[24px] pl-[16px] [&_a]:no-underline [&_a:hover]:underline [&_a:focus]:underline"
             >
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
@@ -802,6 +873,7 @@
         </div>
       </div>
     </div>
+
     <script>
       const buttons = document.querySelectorAll(".faq-btn");
 
